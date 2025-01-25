@@ -1,0 +1,661 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+button,
+form {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* mulai css dari sini */
+
+body {
+  font: 12px 28px arial sans-serif;
+  font-family: 'Rubik', sans-serif;
+  background-color: #f0f0f0;
+  background-image: url(gambar/restaurant_icons.png);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* Navbar section */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 7%;
+  background-color: #c51605;
+  border-radius: 0px 0px 10px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+}
+.navbar a {
+  color: #f0f0f0;
+  size: 1.5rem;
+}
+.navbar .list a {
+  color: rgb(234, 232, 228);
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+  align-items: center;
+}
+
+.navbar .list a:hover::after {
+  transform: scaleX(0.7);
+}
+
+.navbar .list a::after {
+  content: '';
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid;
+  transform: scalex(0);
+  transition: 0.2s linear;
+  color: #f2be22;
+}
+
+.navbar .extra a {
+  color: #f0f0f0;
+  font-size: 1.3rem;
+  margin: 0.5rem;
+}
+
+.navbar .extra a:hover {
+  color: #f2be22;
+}
+
+.search-form {
+  position: absolute;
+  top: 100%;
+  right: -30%;
+  background-color: #f0f0f0;
+  width: 30rem;
+  right: 7%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  border-radius: 0px 0px 10px 10px;
+  transition: 0.5s;
+}
+
+.navbar .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 2px 2px 5px black;
+}
+.nyala {
+  transform: scaleY(1);
+  transition: 0.5s;
+}
+
+#hamburger {
+  display: none;
+}
+
+.shopping-cart {
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  background-color: #f2be22;
+  width: 35rem;
+  height: 100vh;
+  transition: 0.3s;
+  border-left: 4px solid #c51605;
+}
+
+.on {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #f2be22;
+  width: 35rem;
+  height: 100vh;
+  transition: 0.3s;
+  border-left: 4px solid #c51605;
+}
+.shopping-cart img {
+  height: 6rem;
+}
+.shopping-cart h3 {
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.shopping-cart .cart-item {
+  margin: 2rem 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed #c51605;
+}
+.shopping-cart .remove-item {
+  position: absolute;
+  right: 1rem;
+  cursor: pointer;
+}
+.shopping-cart .remove-item :hover {
+  color: #f0f0f0;
+}
+/* Produk */
+.produk {
+  padding: 1rem 7% 8rem;
+  margin: auto;
+}
+.produk h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 8rem;
+  font-weight: 600;
+  color: #c51605;
+  border-radius: 10px;
+  text-shadow: 1px 1px 1px #f2be22;
+}
+.produk .Reguler,
+.Variant,
+.Additional {
+  padding: 8rem 7% 2rem;
+}
+.produk .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.produk .product-cart {
+  text-align: center;
+  border: 1px solid #666;
+  background-color: #f2be22;
+  border-radius: 10px;
+}
+.produk .product-icon {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #c51605;
+  border-radius: 10px 10px 0px 0px;
+  padding: 0.5rem;
+}
+.produk .product-icon a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  color: #c51605;
+  width: 4rem;
+  height: 4rem;
+  margin: 0.3rem;
+  border: 1px solid #666;
+  border-radius: 50%;
+}
+.produk .product-icon a:hover {
+  color: #f0f0f0;
+  background-color: #f2be22;
+}
+.produk .product-image img {
+  height: 20rem;
+  padding-top: 2rem;
+}
+.produk .product-content h3 {
+  font-size: 2.5rem;
+  margin-top: 0.5rem;
+  color: #c51605;
+}
+.produk .price h4 {
+  font-size: 1.7rem;
+}
+.produk span,
+.menu span,
+.contact span {
+  color: #f2be22;
+  text-shadow: 1px 1px 1px #c51605;
+}
+
+/* Menu */
+.menu {
+  padding: 8rem 7% 8rem;
+  margin: auto;
+  /* background-color: #f0f0f0;
+  background-image: url(gambar/restaurant_icons.png); */
+}
+.menu .row {
+  display: flex;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.row .card {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.row .card img {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.row .card h3 {
+  color: black;
+}
+
+.row .card a {
+  background-color: #c51605;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  color: #f0f0f0;
+  padding: 0.5rem;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px black;
+}
+
+.card a:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  color: #c51605;
+  background-color: #f2be22;
+  box-shadow: none;
+}
+
+/* Contact */
+.contact {
+  padding: 6rem 7% 7rem;
+  margin: auto;
+  border-radius: 10px 10px 0px 0px;
+  /* background-color: #f2be22;
+  background-image: url('gambar/restaurant_icons-removebg-preview.png'); */
+}
+
+.contact .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: #c51605;
+  border-radius: 10px;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.contact .row .maps {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.contact .row form .input {
+  display: flex;
+  margin-top: 1rem;
+  background-color: white;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  align-items: center;
+}
+
+.contact .row form .input input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  background-color: white;
+}
+
+.contact .row .btn {
+  width: 30%;
+  padding: 0.5rem;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px black;
+  align-items: center;
+}
+
+.contact .row .btn:hover::after {
+  transform: scaleX(0.7);
+}
+
+.contact .row .btn::after {
+  content: '';
+  display: block;
+  border-bottom: 0.1rem solid;
+  transform: scalex(0);
+  transition: 0.2s linear;
+  color: #f2be22;
+}
+/* Contact END */
+
+/* FOOTER */
+footer {
+  background-color: #c51605;
+  text-align: center;
+  color: #f0f0f0;
+}
+footer .social,
+.credit {
+  padding: 0.5rem 0;
+}
+footer .social a {
+  color: #f0f0f0;
+  padding: 0.5rem;
+}
+footer .credit a {
+  text-decoration: none;
+  color: #f2be22;
+}
+footer .social a :hover {
+  color: #f2be22;
+}
+
+footer .link a:hover {
+  color: #f2be22;
+}
+
+footer .credit p :hover {
+  color: #f0f0f0;
+}
+/* modal box */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.modal-container {
+  position: relative;
+  background-color: #f0f0f0;
+  color: black;
+  margin: 15% auto;
+  padding: 1.2rem;
+  border: 1px solid #666;
+  width: 80%;
+  height: 50%;
+  animation: modalanimate 0.5s;
+}
+.modal-container .close-icon {
+  position: absolute;
+  right: 1rem;
+}
+
+.modal-content {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.modal-content img {
+  height: 20rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.modal-content p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  margin-top: 1.2rem;
+}
+
+.modal-content a {
+  display: flex;
+  gap: 1rem;
+  width: 10rem;
+  background-color: #c51605;
+  color: #f0f0f0;
+  margin-top: 1rem;
+  padding: 1rem 1.6rem;
+  text-decoration: none;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.modal-content span {
+  color: #f0f0f0;
+  text-decoration: none;
+}
+
+@keyframes modalanimate {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+/* Media Queries */
+
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+
+  #hamburger {
+    display: inline-block;
+  }
+
+  .list {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #f2be22;
+    width: 20rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  .list.active a:hover {
+    color: #f0f0f0;
+    transform: scale(1.2);
+    transition: 0.5s;
+  }
+  .list.active {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 100%;
+    right: 0%;
+    background-color: #f2be22;
+    width: 20rem;
+    height: 100vh;
+    transition: 0.3s;
+    border-radius: 0px 0px 0px 10px;
+    border-left: 5px solid #c51605;
+    border-bottom: 5px solid #c51605;
+  }
+  .list.active a {
+    color: #c51605;
+    margin: 1.5rem;
+    padding: 0.6rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .menu .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    justify-content: center;
+  }
+}
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+  .row {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1.5rem;
+  }
+  .menu .row .card {
+    text-align: center;
+    margin-top: 1.5rem;
+    flex-direction: row;
+  }
+  .contact .row {
+    flex-wrap: wrap;
+  }
+  .contact .row .maps {
+    border-radius: 10px 10px 0px 0px;
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+  }
+  .contact .row form {
+    padding-top: 0;
+  }
+
+  .modal-content {
+    flex-wrap: wrap;
+    height: 70%;
+  }
+}
+
+/* mobile */
+@media (max-width: 450px) {
+  html {
+    font-size: 62%;
+  }
+  .slider img {
+    width: 50%;
+  }
+}
