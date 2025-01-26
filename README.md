@@ -11,8 +11,6 @@ This is a mini-project created for **KSM Android** using **HTML**, **CSS**, and 
 - **User-Friendly Interface**: Easy navigation with a modern design.
 - **Interactive Elements**: Enhanced interactivity using JavaScript.
 
-```
-
 ## 🛠️ Tools and Technologies
 - **HTML** for structuring the content.
 - **CSS** for styling and responsive design.
